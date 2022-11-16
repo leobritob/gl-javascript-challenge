@@ -28,4 +28,13 @@ describe('test1', () => {
     // Assert
     expect(result).to.equal('112233');
   });
+
+  it('should return length enconding correctly for (AAAAAAAAAAAAABBCCCCDDAA)', () => {
+    // Arrange
+    const example1 = 'AAAAAAAAAAAAABBCCCCDDAA';
+    // Act
+    const result = runLengthEnconding(example1);
+    // Assert
+    expect(result).to.equal('9A4A2B4C2D2A');
+  });
 });

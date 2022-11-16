@@ -19,10 +19,12 @@ function runLengthEnconding(source) {
 
     if (lastLetter !== letter) {
       result.push(`${aux[lastLetter]}${lastLetter}`);
+      aux[letter] = 1;
     }
 
     if (i === list.length - 1) {
       result.push(`${aux[letter]}${letter}`);
+      aux[letter] = 1;
     }
 
     lastLetter = letter;
